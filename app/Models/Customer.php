@@ -58,7 +58,7 @@ class Customer extends Authenticatable implements JWTSubject // <-- tambahkan "A
      * @return void
      */
     public function getCreatedAtAttribute($date)
-    {   
+    {
         $value = Carbon::parse($date);
         $parse = $value->locale('id');
         return $parse->translatedFormat('l, d F Y');
